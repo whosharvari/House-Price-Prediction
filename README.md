@@ -2,16 +2,16 @@
 
 ##  Overview
 
-This project focuses on predicting house prices using machine learning by applying **data cleaning, exploratory data analysis (EDA), and feature engineering** to uncover key factors influencing prices.
+This project predicts house prices using machine learning by applying **data cleaning, exploratory data analysis (EDA), and feature engineering** to identify key price drivers.
 
 ---
 
 ##  Approach
 
-* Performed **data cleaning** and handled missing values
-* Conducted **EDA** to identify important trends and relationships
-* Applied **feature engineering** to improve model performance
-* Encoded categorical variables and scaled features
+* Cleaned data and handled missing values
+* Performed EDA to understand feature relationships
+* Engineered features to improve model performance
+* Applied encoding and scaling using a pipeline
 * Built and evaluated regression models using **scikit-learn**
 
 ---
@@ -21,29 +21,50 @@ This project focuses on predicting house prices using machine learning by applyi
 ```
 house-price-prediction/
 │
+├── app.py
+├── requirements.txt
+├── README.md
+│
 ├── data/
-│   ├── housing.csv
-│   └── input.csv
+│   └── housing.csv
 │
 ├── notebooks/
 │   └── main.ipynb
 │
-├── model/
-│   └── full_model.pkl (not included)
-│
-├── requirements.txt
-└── README.md
+└── model/
 ```
 
 ---
 
 ##  How to Run
 
+1. Clone the repository
+
 ```
 git clone https://github.com/your-username/house-price-prediction.git
 cd house-price-prediction
+```
+
+2. Install dependencies
+
+```
 pip install -r requirements.txt
-jupyter notebook notebooks/main.ipynb
+```
+
+3. Generate the model
+
+* Open and run all cells in:
+
+```
+notebooks/main.ipynb
+```
+
+* This will create `full_model.pkl` locally
+
+4. Run the Streamlit app
+
+```
+streamlit run app.py
 ```
 
 ---
@@ -51,17 +72,15 @@ jupyter notebook notebooks/main.ipynb
 ## ⚠️ Note
 
 The trained model file (`full_model.pkl`) is not included due to its large size.
-Run the notebook to generate it locally.
+Please run the notebook to generate it before using the app.
 
 ---
 
 ##  Tech Stack
 
-Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Streamlit
 
 ---
 
-
-##  Author
-
+## Author
 Sharvari Mude
